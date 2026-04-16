@@ -1,7 +1,8 @@
-name = "Egor"
-age = 29
-goal = "become functional in Python"
+import requests
 
-print(name)
-print(age)
-print(goal)
+response = requests.get("https://api.github.com/users/klima-tm")
+
+print(response.status_code)
+print(response.json())
+data = response.json()
+print(data["login"]), print(data["public_repos"]), print(data["created_at"])
