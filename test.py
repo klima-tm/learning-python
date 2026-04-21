@@ -1,4 +1,5 @@
-import requests
-response = requests.get("https://api.github.com/users/tdinh-me")
-print(response.status_code)
-print(response.json())
+class Person:
+    def __init__(self, age, status):
+        self.age=age
+        self.status=status
+Egor=Person(20, "single")
